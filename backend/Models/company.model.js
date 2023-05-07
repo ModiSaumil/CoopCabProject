@@ -12,34 +12,58 @@ const schema = new mongoose.Schema(
             required: [true, 'Owner Name is required']
         },
 
-        state:{
+        email:{
             type: String,
-            required: [true, 'State is required']
+            //required: [true, 'Owner Name is required']
+        },
+
+        phone_number:{
+            type: Number,
+            //required: [true, 'Company's contact number is required']
         },
 
         city:{
             type: String,
-            required: [true, 'City is required']
+            //require: true
+        },
+
+        state:{
+            type: String,
+            //required: [true, 'State details is required']
+        },
+
+        country:{
+            type: String,
+            //required: [true, 'Country details is required']
         },
 
         vehicle_details:{
             type: String,
-            required: [true, 'Vehicle details is required']
+            //required: [true, 'Vehicle details is required']
         },
 
         bank_details:{
             type: String,
-            required: [true, 'bank details is required']
+            //required: [true, 'Bank details is required']
         },
 
-        adhar_card:{
+        gumastadhara_number:{
             type: String,
-            required: [true, 'Adhar card details is required']
+            //required: [true, 'Gumastadhara details is required']
+        },
+
+        password:{
+            type: String
         },
 
         registerd_date:{
             type: Date,
             default: Date.now()
+        },
+
+        flag:{
+            type: Number,
+            default: 1
         }
     },
     {timestamps: true}
